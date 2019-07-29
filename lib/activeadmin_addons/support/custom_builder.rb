@@ -45,7 +45,7 @@ module ActiveAdminAddons
     end
 
     def class_name
-      model.model_name.param_key
+      model.class.name.underscore.gsub('/', '_')
     end
 
     # attachment_column :foto
